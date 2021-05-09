@@ -1,1 +1,0 @@
-/home/serivesmejia/.doom.d

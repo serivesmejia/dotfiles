@@ -1,1 +1,5 @@
-/home/serivesmejia/.emacs.d/bin/emcrestart
+#!/bin/bash
+
+doom sync
+emacsclient -e "(kill-emacs)"
+emacs --daemon
