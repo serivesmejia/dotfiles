@@ -1,0 +1,33 @@
+#!/bin/bash
+
+# sacred git
+sudo apt install git
+
+# allowing snap on linux mint and other systems
+sudo rm /etc/apt/preferences.d/nosnap.pref
+sudo apt update
+
+# installing snap
+sudo apt install snapd
+# installing emacs from snap since i was too lazy to figure out other way
+# (altho snap kinda sus)
+sudo snap install emacs --classic
+
+# downloading and installing brew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# adding brew to the PATH
+test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
+test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
+echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
+
+# installing ripgrep (idk wats this but doom needs it)
+brew install ripgrep
+
+# install fd (idk wats this either but seems like doom works better with it)
+sudo apt install fd-find
+
+# install doom emacs
+git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
+~/.emacs.d/bin/doom install
