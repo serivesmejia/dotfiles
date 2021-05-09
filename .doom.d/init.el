@@ -188,3 +188,5 @@
        (default +bindings +smartparens))
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
+
+(add-hook 'server-switch-hook (lambda () (call-interactively 'neotree-show)))
