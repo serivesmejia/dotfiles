@@ -48,5 +48,3 @@
 ;(unpin! pinned-package another-pinned-package)
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
-
-(smooth-scrolling :repo "aspiers/smooth-scrolling" :fetcher github)
