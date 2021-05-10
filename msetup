@@ -3,16 +3,6 @@
 # sacred git
 sudo apt install git
 
-# allowing snap on linux mint and other systems
-sudo rm /etc/apt/preferences.d/nosnap.pref
-sudo apt update
-
-# installing snap
-sudo apt install snapd
-# installing emacs from snap since i was too lazy to figure out other way
-# (altho snap kinda sus)
-sudo snap install emacs --classic
-
 # downloading and installing brew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
@@ -21,6 +11,9 @@ test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
 test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
 test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
 echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
+
+# installing emacs from brew
+brew install emacs
 
 # installing ripgrep (idk wats this but doom needs it)
 brew install ripgrep
