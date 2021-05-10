@@ -48,3 +48,7 @@
 ;(unpin! pinned-package another-pinned-package)
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
+
+(package! groovy-mode
+  :recipe(:host github
+          :repo "Groovy-Emacs-Modes/groovy-emacs-modes"))

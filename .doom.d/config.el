@@ -20,8 +20,8 @@
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
 
-(setq doom-font "Fira Mono 12"
-      doom-variable-pitch-font "Overpass 12")
+(setq doom-font "Fira Mono 11"
+      doom-variable-pitch-font "Overpass 11")
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
@@ -58,3 +58,11 @@
 (setq undo-limit 60000000
       evil-want-fine-undo t
       auto-save-default t)
+
+(use-package treemacs
+  :config
+  (setq treemacs-collapse-dirs 4
+        treemacs-indentation 1
+        treemacs-width 32))
+
+(setq centaur-tabs-set-icons t)
