@@ -52,3 +52,11 @@
 (package! groovy-mode
   :recipe(:host github
           :repo "Groovy-Emacs-Modes/groovy-emacs-modes"))
+
+(package! sphinx-mode
+  :recipe(:host github
+          :repo "Fuco1/sphinx-mode"))
+
+(package! auto-complete-rst
+  :recipe(:host github
+          :repo "tkf/auto-complete-rst"))
