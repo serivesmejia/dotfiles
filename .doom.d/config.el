@@ -26,7 +26,7 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-vibrant)
+(setq doom-theme 'doom-flatwhite)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -64,5 +64,19 @@
   (setq treemacs-collapse-dirs 4
         treemacs-indentation 1
         treemacs-width 32))
+
+(defun synchronize-theme ()
+    (setq hour 
+        (string-to-number 
+            (substring (current-time-string) 11 13)))
+    (if (member hour (number-sequence 8 19))
+        (setq now 'doom-flatwhite)
+        (setq now 'doom-vibrant)) 
+    (if (equal now doom-theme)
+        nil
+        (setq doom-theme now)
+        (eval now) ) ) ;; end of (defun ...
+
+;;(run-with-timer 0 3600 'synchronize-theme)
 
 (setq centaur-tabs-set-icons t)

@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # disabling weird middle button behavior
 I=0
 
@@ -14,9 +16,11 @@ do
     fi
 done
 
-export PATH=$PATH:$HOME/.emacs.d/bin/
+export PATH=$PATH:$HOME/.emacs.d/bin/:$HOME/.local/bin
 
 alias emc='emacsclient -c'
 alias emckill='emacsclient -e "(kill-emacs)"'
 alias emcstart='emacs --daemon'
 alias emcrestart='doom sync;emckill;emcstart'
+
+alias trim='sudo fstrim -v ~/.'
