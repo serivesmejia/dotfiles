@@ -2,22 +2,10 @@
 
 # sacred git
 sudo apt install git
-
-# downloading and installing brew
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# adding brew to the PATH
-test -d ~/.linuxbrew && eval $(~/.linuxbrew/bin/brew shellenv)
-test -d /home/linuxbrew/.linuxbrew && eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
-test -r ~/.bash_profile && echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.bash_profile
-echo "eval \$($(brew --prefix)/bin/brew shellenv)" >>~/.profile
-
-# installing emacs from brew
-brew install emacs
-
+# installing emacs
+sudo apt install emacs
 # installing ripgrep (idk wats this but doom needs it)
-brew install ripgrep
-
+sudo apt install ripgrep
 # install fd (idk wats this either but seems like doom works better with it)
 sudo apt install fd-find
 
