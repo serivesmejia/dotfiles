@@ -60,3 +60,17 @@
 (package! auto-complete-rst
   :recipe(:host github
           :repo "tkf/auto-complete-rst"))
+
+(package! pdf-tools
+  :recipe(:host github
+          :repo "vedang/pdf-tools"))
+
+(package! vlf :recipe (:host github :repo "m00natic/vlfi" :files ("*.el"))
+  :pin "cc02f25337..." :disable t)
+
+(package! page-break-lines :recipe (:host github :repo "purcell/page-break-lines"))
+
+(package! org-pretty-table
+  :recipe (:host github :repo "Fuco1/org-pretty-table") :pin "87772a9469...")
+
+(package! xkcd :pin "66e928706f...")
